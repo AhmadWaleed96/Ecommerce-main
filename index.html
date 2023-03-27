@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Vector.png" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>ECommerce</title>
+</head>
+<body>
+    <!-- Start One Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <button class="navbar-toggler" style="position: absolute; right: 10px; top: 10px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="logo d-flex align-items-center">
+            <a class="navbar-brand">
+                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0168 30.4885C23.2687 30.4885 29.958 23.7182 29.958 15.3665C29.958 7.01495 23.2687 0.244629 15.0168 0.244629C6.76507 0.244629 0.0756836 7.01495 0.0756836 15.3665C0.0756836 23.7182 6.76507 30.4885 15.0168 30.4885ZM17.323 11.9283C18.5966 10.6392 18.5966 8.54927 17.323 7.2602C16.0493 5.97114 13.9844 5.97114 12.7107 7.2602C11.4371 8.54927 11.4371 10.6392 12.7107 11.9283L15.0168 14.2623L17.323 11.9283ZM18.4141 17.7006C19.6877 18.9897 21.7527 18.9897 23.0263 17.7006C24.2999 16.4116 24.2999 14.3216 23.0263 13.0325C21.7527 11.7436 19.6877 11.7436 18.4141 13.0325L16.108 15.3666L18.4141 17.7006ZM17.323 23.473C18.5966 22.1839 18.5966 20.094 17.323 18.8049L15.0168 16.4709L12.7107 18.8049C11.4371 20.094 11.4371 22.1839 12.7107 23.473C13.9844 24.762 16.0493 24.762 17.323 23.473ZM7.00737 17.7006C5.73375 16.4116 5.73375 14.3216 7.00737 13.0325C8.28105 11.7436 10.346 11.7436 11.6197 13.0325L13.9257 15.3666L11.6197 17.7006C10.346 18.9897 8.28105 18.9897 7.00737 17.7006Z" fill="#68B299"/>
+                </svg>
+                Logoipsum
+            </a>
+
+            <div class="site d-flex align-items-center">
+                <svg width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 31.75C13.2538 31.7485 13.4996 31.6613 13.6975 31.5025C14.125 31.12 25.375 22.0525 25.375 12.625C25.375 9.34295 24.0712 6.19532 21.7504 3.87455C19.4297 1.55379 16.2821 0.25 13 0.25C9.71795 0.25 6.57032 1.55379 4.24955 3.87455C1.92879 6.19532 0.625 9.34295 0.625 12.625C0.625 22.0525 11.875 31.12 12.3025 31.5025C12.5004 31.6613 12.7462 31.7485 13 31.75ZM2.875 12.625C2.875 9.93968 3.94174 7.36435 5.84054 5.46554C7.73935 3.56674 10.3147 2.5 13 2.5C15.6853 2.5 18.2606 3.56674 20.1595 5.46554C22.0583 7.36435 23.125 9.93968 23.125 12.625C23.125 19.7125 15.3963 27.0363 13 29.1513C10.6037 27.0363 2.875 19.7125 2.875 12.625Z" fill="#3D9CB0"/>
+                    <path d="M18.625 12.625C18.625 11.5125 18.2951 10.4249 17.677 9.49992C17.0589 8.57489 16.1804 7.85392 15.1526 7.42818C14.1248 7.00244 12.9938 6.89104 11.9026 7.10809C10.8115 7.32513 9.8092 7.86086 9.02253 8.64753C8.23586 9.4342 7.70013 10.4365 7.48309 11.5276C7.26604 12.6188 7.37744 13.7498 7.80318 14.7776C8.22892 15.8054 8.94989 16.6839 9.87492 17.302C10.7999 17.9201 11.8875 18.25 13 18.25C14.4918 18.25 15.9226 17.6574 16.9775 16.6025C18.0324 15.5476 18.625 14.1168 18.625 12.625ZM9.625 12.625C9.625 11.9575 9.82294 11.305 10.1938 10.75C10.5646 10.1949 11.0917 9.76236 11.7084 9.50691C12.3251 9.25146 13.0037 9.18463 13.6584 9.31485C14.3131 9.44508 14.9145 9.76652 15.3865 10.2385C15.8585 10.7105 16.1799 11.3119 16.3102 11.9666C16.4404 12.6213 16.3735 13.2999 16.1181 13.9166C15.8627 14.5333 15.4301 15.0604 14.8751 15.4312C14.32 15.8021 13.6675 16 13 16C12.1049 16 11.2465 15.6444 10.6135 15.0115C9.98058 14.3786 9.625 13.5201 9.625 12.625Z" fill="#3D9CB0"/>
+                    </svg>
+                <div class="paragraph-site">
+                    <p class="one-para">Delivery</p>
+                    <p class="two-para">Saudi Arabia</p>
+                </div>
+            </div>  
+        </div>
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo03">
+            <form class="search d-flex" role="search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #008ECC;"></i>
+                <input class="form-control me-2" type="search" placeholder="Search essentials, groceries and more..." aria-label="Search">
+              </form>
+              <div class="group-link d-flex justify-content-sm-between">
+                <ul class="navbar-nav d-flex flex-row justify-content-between align-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <svg width="24" height="24" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.16 2.60981C18.0983 1.54782 16.6908 0.90214 15.1933 0.790195C13.6958 0.67825 12.2078 1.10748 11 1.99981C9.72769 1.05345 8.14402 0.624325 6.56795 0.798851C4.99188 0.973377 3.54047 1.73859 2.506 2.9404C1.47154 4.14221 0.930854 5.69133 0.992833 7.27583C1.05481 8.86032 1.71485 10.3625 2.84003 11.4798L10.29 18.9298C10.383 19.0235 10.4936 19.0979 10.6155 19.1487C10.7373 19.1995 10.868 19.2256 11 19.2256C11.132 19.2256 11.2627 19.1995 11.3846 19.1487C11.5065 19.0979 11.6171 19.0235 11.71 18.9298L19.16 11.4798C19.7427 10.8975 20.2049 10.2062 20.5202 9.44518C20.8356 8.6842 20.9979 7.86854 20.9979 7.04481C20.9979 6.22108 20.8356 5.40542 20.5202 4.64445C20.2049 3.88347 19.7427 3.19209 19.16 2.60981ZM17.75 10.0698L11 16.8098L4.25003 10.0698C3.65521 9.47251 3.25001 8.71286 3.08526 7.88615C2.92052 7.05945 3.00356 6.2025 3.32398 5.42281C3.6444 4.64312 4.18793 3.97541 4.88638 3.50344C5.58483 3.03147 6.40709 2.77625 7.25003 2.76981C8.37614 2.77257 9.45513 3.22215 10.25 4.01981C10.343 4.11354 10.4536 4.18794 10.5755 4.23871C10.6973 4.28947 10.828 4.31561 10.96 4.31561C11.092 4.31561 11.2227 4.28947 11.3446 4.23871C11.4665 4.18794 11.5771 4.11354 11.67 4.01981C12.4884 3.3107 13.5455 2.93896 14.6276 2.97984C15.7096 3.02072 16.7357 3.47116 17.4982 4.24C18.2607 5.00884 18.7026 6.03865 18.7345 7.121C18.7664 8.20335 18.3859 9.2574 17.67 10.0698H17.75Z" fill="#3D9CB0"/>
+                            </svg>
+                            
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.9998C9.3528 11.9998 7.2 9.84702 7.2 7.19982C7.2 4.55262 9.3528 2.39982 12 2.39982C14.6472 2.39982 16.8 4.55262 16.8 7.19982C16.8 9.84702 14.6472 11.9998 12 11.9998ZM16.5096 12.8074C17.3498 12.1342 18.0278 11.2808 18.4935 10.3101C18.9592 9.33945 19.2007 8.27642 19.2 7.19982C19.2009 5.98247 18.8931 4.78485 18.3054 3.71876C17.7177 2.65267 16.8693 1.75288 15.8395 1.10372C14.8097 0.454561 13.6321 0.0771668 12.4168 0.00670128C11.2015 -0.0637642 9.98815 0.1751 8.89021 0.700891C7.79227 1.22668 6.84558 2.02227 6.13861 3.01329C5.43164 4.00431 4.98747 5.15835 4.84764 6.36764C4.70782 7.57693 4.87689 8.80189 5.33906 9.92809C5.80123 11.0543 6.54142 12.0449 7.49041 12.8074C3.09961 14.4574 0 18.5338 0 23.9998H2.4C2.4 17.9998 6.7068 14.3998 12 14.3998C17.2932 14.3998 21.6 17.9998 21.6 23.9998H24C24 18.5338 20.9004 14.4574 16.5096 12.8074Z" fill="#3D9CB0"/>
+                            </svg>
+                            
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <svg width="24" height="24" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 16C6.20333 16 5.91332 16.088 5.66664 16.2528C5.41997 16.4176 5.22771 16.6519 5.11418 16.926C5.00065 17.2001 4.97094 17.5017 5.02882 17.7926C5.0867 18.0836 5.22956 18.3509 5.43934 18.5607C5.64912 18.7704 5.91639 18.9133 6.20736 18.9712C6.49834 19.0291 6.79994 18.9993 7.07403 18.8858C7.34811 18.7723 7.58238 18.58 7.7472 18.3334C7.91203 18.0867 8 17.7967 8 17.5C8 17.1022 7.84196 16.7206 7.56066 16.4393C7.27936 16.158 6.89782 16 6.5 16ZM17 13H5C4.73478 13 4.48043 12.8946 4.29289 12.7071C4.10536 12.5196 4 12.2652 4 12C4 11.7348 4.10536 11.4804 4.29289 11.2929C4.48043 11.1054 4.73478 11 5 11H13.4912C14.1426 10.9979 14.7758 10.7847 15.2959 10.3925C15.816 10.0002 16.195 9.44998 16.376 8.82422L17.9614 3.2749C18.004 3.12607 18.0114 2.9694 17.9831 2.81722C17.9548 2.66505 17.8915 2.52152 17.7983 2.39793C17.7051 2.27435 17.5845 2.17408 17.446 2.10503C17.3075 2.03598 17.1548 2.00003 17 2H4.73907C4.53206 1.41736 4.15044 0.91271 3.64622 0.554814C3.14201 0.196918 2.53971 0.00318075 1.92139 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H1.92139C2.13847 2.00076 2.34947 2.07182 2.52279 2.20253C2.6961 2.33325 2.82242 2.51659 2.88281 2.7251L3.03833 3.26984L3.03857 3.2749L4.6792 9.01709C3.91576 9.09922 3.21287 9.47094 2.71527 10.0557C2.21766 10.6405 1.96321 11.3938 2.00433 12.1606C2.04544 12.9273 2.37898 13.6491 2.93626 14.1773C3.49355 14.7055 4.23216 15 5 15H17C17.2652 15 17.5196 14.8946 17.7071 14.7071C17.8946 14.5196 18 14.2652 18 14C18 13.7348 17.8946 13.4804 17.7071 13.2929C17.5196 13.1054 17.2652 13 17 13ZM15.6743 4L14.4531 8.27441C14.3928 8.4831 14.2664 8.6666 14.093 8.79742C13.9196 8.92824 13.7084 8.99932 13.4912 9H6.75439L6.49945 8.10779L5.32642 4H15.6743ZM14.5 16C14.2033 16 13.9133 16.088 13.6666 16.2528C13.42 16.4176 13.2277 16.6519 13.1142 16.926C13.0006 17.2001 12.9709 17.5017 13.0288 17.7926C13.0867 18.0836 13.2296 18.3509 13.4393 18.5607C13.6491 18.7704 13.9164 18.9133 14.2074 18.9712C14.4983 19.0291 14.7999 18.9993 15.074 18.8858C15.3481 18.7723 15.5824 18.58 15.7472 18.3334C15.912 18.0867 16 17.7967 16 17.5C16 17.1022 15.842 16.7206 15.5607 16.4393C15.2794 16.158 14.8978 16 14.5 16Z" fill="#3D9CB0"/>
+                            </svg>
+                            
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End One Navbar -->
+      <!-- Start Two Navbar -->
+      <nav class="navbar bg-body-tertiary d-flex justify-content-center">
+        <div class="container d-flex justify-content-center">
+            <ul class="navbar-nav d-flex justify-content-center flex-row flex-wrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Premium Fruits
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Home & Kitchen
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Fashion
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Electronics
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </nav>
+      <!-- End Two Navbar -->
+
+      <div class="sales">
+        <p>There are now 70% discounts on all household items <a href="" class="text-danger text-decoration-none">here</a></p>
+      </div>
+
+      <!-- Start Hero Section -->
+      <section class="hero">
+        <div class="container">
+            <img src="img/hero.png" class="col-12" alt="hero">
+        </div>
+      </section>
+      <!-- End Hero Section -->
+
+      <!-- start product section -->
+      <section class="slider">
+        <div class="nav-title container d-flex justify-content-between">
+            <p>New Arrivals</p>
+            <a href="">See All</a>
+        </div>
+
+        <div class="container">
+        <button class="slider__control prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider__control next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slider__container" data-multislide="true" data-step="4">
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                    <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                    <div class="card-body">
+                        <div class="name-product d-flex justify-content-between">
+                            <h5 class="card-title text-capitalize">Ariel</h5>
+                            <div class="star-product d-flex">
+                                <p>(4.5)</p>
+                                <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                            </div>
+                        </div>
+                      <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                      <div class="sale-card d-flex justify-content-between">
+                        <div class="af-be d-flex">
+                            <p class="af">350<span>.S</span></p>
+                            <p class="be">200<span>.S</span></p>
+                        </div>
+                        <p class="sale-min">12% Off</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                    <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                    <div class="card-body">
+                        <div class="name-product d-flex justify-content-between">
+                            <h5 class="card-title text-capitalize">Ariel</h5>
+                            <div class="star-product d-flex">
+                                <p>(4.5)</p>
+                                <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                            </div>
+                        </div>
+                      <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                      <div class="sale-card d-flex justify-content-between">
+                        <div class="af-be d-flex">
+                            <p class="af">350<span>.S</span></p>
+                            <p class="be">200<span>.S</span></p>
+                        </div>
+                        <p class="sale-min">12% Off</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- end product section -->
+
+      <!-- start mobile section -->
+      <section class="slider mobile-product">
+
+            <h3>Shop by Category</h3>
+      <div class="container">
+        <button class="slider__control prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider__control next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slider__container" data-multislide="true" data-step="4">
+          <div class="slider__item">
+            <div class="mobile-link col-12 col-sm-12 col-md-6 col-lg-3">
+                <div><span></span></div>
+                <img src="img/mobile.png" alt="mobile">
+                <a class="text-decoration-none">IPHONE</a>
+                <i class="fa-brands fa-apple" style="color: #000000;"></i>
+                <p>UP to 80% OFF</p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mobile-link col-12 col-sm-12 col-md-6 col-lg-3">
+                <div><span></span></div>
+                <img src="img/mobile.png" alt="mobile">
+                <a class="text-decoration-none">IPHONE</a>
+                <i class="fa-brands fa-apple" style="color: #000000;"></i>
+                <p>UP to 80% OFF</p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mobile-link col-12 col-sm-12 col-md-6 col-lg-3">
+                <div><span></span></div>
+                <img src="img/mobile.png" alt="mobile">
+                <a class="text-decoration-none">IPHONE</a>
+                <i class="fa-brands fa-apple" style="color: #000000;"></i>
+                <p>UP to 80% OFF</p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mobile-link col-12 col-sm-12 col-md-6 col-lg-3">
+                <div><span></span></div>
+                <img src="img/mobile.png" alt="mobile">
+                <a class="text-decoration-none">IPHONE</a>
+                <i class="fa-brands fa-apple" style="color: #000000;"></i>
+                <p>UP to 80% OFF</p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mobile-link col-12 col-sm-12 col-md-6 col-lg-3">
+                <div><span></span></div>
+                <img src="img/mobile.png" alt="mobile">
+                <a class="text-decoration-none">IPHONE</a>
+                <i class="fa-brands fa-apple" style="color: #000000;"></i>
+                <p>UP to 80% OFF</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- end mobile section -->
+
+      <!-- start brand section -->
+      <section class="brand-img">
+        <div class="container d-flex flex-wrap">
+            <div class="one-brand brand col-12 col-sm-12 col-md-12 col-lg-6">
+                <p>20% - 60% off bags</p>
+                <div class="img-brand">
+                    <a href="">
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 1.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                    <a href="">
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 2.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                    <a href="">
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 3.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                    <a href="">
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 4.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                </div>
+            </div>
+            <div class="two-brand brand col-12 col-sm-12 col-md-12 col-lg-6">
+                <p>20% - 60% off Sunglass</p>
+                <div class="img-brand">
+                    <a href="">
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 5.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                    <a href="">
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 7.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                    <a href="">    
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 6.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                    <a href="">    
+                        <img src="img/laura-chouette-Atomp7YdMaE-unsplash 8.png" alt="">
+                        <p>Handbags</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- end brand section -->
+
+      <!-- start shop brand section -->
+      <section class="shop-brands">
+          <div class="container">
+        <h3>Shop by Brands</h3>
+
+        <div class="shops">
+            <a href="">
+                <img  src="img/path815.png" alt="" width="110px" height="50">
+            </a>
+            <a href="">
+                <img  src="img/Vector (1).png" alt="" width="110px" height="50">
+            </a>    
+            <a href="">
+                <img  src="img/block.png" alt="">
+            </a>    
+            <a href="">
+                <img  src="img/Chanel_logo_interlocking_cs 1.png" alt="" width="110px" height="50">
+            </a>    
+            <a href="">
+                <img  src="img/Prada-Logo 1.png" alt="" width="110px" height="50">
+            </a>    
+            <a href="">
+                <img  src="img/logo 1.png" alt="" width="110px" height="50">
+            </a>    
+            </div>
+        </div>
+      </section>
+      <!-- end shop brand section -->
+
+      <!-- start hot section -->
+      <section class="slider">
+        <div class="nav-title container d-flex justify-content-between">
+            <p>Hot deals</p>
+            <a href="">See All</a>
+        </div>
+
+        <div class="container">
+        <button class="slider__control prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider__control next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slider__container" data-multislide="true" data-step="4">
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                <div class="card-body">
+                    <div class="name-product d-flex justify-content-between">
+                        <h5 class="card-title text-capitalize">Ariel</h5>
+                        <div class="star-product d-flex">
+                            <p>(4.5)</p>
+                            <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                        </div>
+                    </div>
+                  <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                  <div class="sale-card d-flex justify-content-between">
+                    <div class="af-be d-flex">
+                        <p class="af">350<span>.S</span></p>
+                        <p class="be">200<span>.S</span></p>
+                    </div>
+                    <p class="sale-min">12% Off</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                    <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                    <div class="card-body">
+                        <div class="name-product d-flex justify-content-between">
+                            <h5 class="card-title text-capitalize">Ariel</h5>
+                            <div class="star-product d-flex">
+                                <p>(4.5)</p>
+                                <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                            </div>
+                        </div>
+                      <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                      <div class="sale-card d-flex justify-content-between">
+                        <div class="af-be d-flex">
+                            <p class="af">350<span>.S</span></p>
+                            <p class="be">200<span>.S</span></p>
+                        </div>
+                        <p class="sale-min">12% Off</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+          <div class="slider__item prod">
+            <div class="card p-3" style="width: 18rem; border-radius: 1rem;">
+                    <img src="img/ariel.png" class="card-img-top" alt="product" height="235px" width="208px">
+                    <div class="card-body">
+                        <div class="name-product d-flex justify-content-between">
+                            <h5 class="card-title text-capitalize">Ariel</h5>
+                            <div class="star-product d-flex">
+                                <p>(4.5)</p>
+                                <i class="fa-solid fa-star position-relative" style="color: #f0c800; position: relative; top: 5px;"></i>
+                            </div>
+                        </div>
+                      <p class="card-text">Automatic Lavender Powder Detergent 4.5KG</p>
+                      <div class="sale-card d-flex justify-content-between">
+                        <div class="af-be d-flex">
+                            <p class="af">350<span>.S</span></p>
+                            <p class="be">200<span>.S</span></p>
+                        </div>
+                        <p class="sale-min">12% Off</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- end hot section -->
+
+      <!-- start life section -->
+      <section class="life">
+        <div class="container">
+            <img src="img/Group 137.png" alt="" class="col-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </section>
+      <!-- end life section -->
+
+      <!-- start product life section -->
+      <section class="life-product">
+        <div class="container d-flex flex-wrap">
+            <div class="life-one lifes col-12 col-sm-12 col-md-12 col-lg-6">
+                <img src="img/Group 139.png" alt="" width="100%" height="100%">
+                <div class="detils">
+                    <p>Skincare Essentials</p>
+                    <a href="">
+                        <i class="fa-solid fa-right-long" style="color: #A53F64;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="life-two lifes col-12 col-sm-12 col-md-12 col-lg-6">
+                <img src="img/skincare 1.png" alt="" width="100%" height="100%">
+                <div class="detils">
+                    <p>Facepacks & Peels</p>
+                    <a href="">
+                        <i class="fa-solid fa-right-long" style="color: #185ed8;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- start product life section -->
+
+      <footer>
+        <div class="container d-flex flex-wrap p-5">
+        <section class="fot-one col-12 col-sm-12 col-md-6 col-lg-4">
+            <a class="navbar-brand">
+                <img src="img/Vector.png" alt="">
+                <span class="text-white" style="font-size: 18px;">Logoipsum</span>
+            </a>
+            <div class="contact">
+                <article>
+                    <i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+                    <span>Whatsapp</span>
+                    <p>+1 202-918-2132</p>
+                </article>
+    
+                <article>
+                    <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+                    <span>Call Us</span>
+                    <p>+1 202-918-2132</p>
+                </article>
+            </div>
+    
+            <div class="social">
+                <span>Follow us :</span>
+                <a href=""><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                <a href=""><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+            </div>
+        </section>
+        <section class="fot-two col-12 col-sm-12 col-md-6 col-lg-4">
+            <h4>Most Popular Categories</h4>
+            <div class="Categories">
+                <ul>
+                    <li>
+                        <a href="">Staples</a>
+                    </li>
+                    <li>
+                        <a href="">Beverages</a>
+                    </li>
+                    <li>
+                        <a href="">Personal Care</a>
+                    </li>
+                    <li>
+                        <a href="">Home Care</a>
+                    </li>
+                    <li>
+                        <a href="">Baby Care</a>
+                    </li>
+                    <li>
+                        <a href="">Vegetables & Fruits</a>
+                    </li>
+                    <li>
+                        <a href="">Snacks & Foods</a>
+                    </li>
+                    <li>
+                        <a href="">Dairy & Bakery</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="fot-three col-12 col-sm-12 col-md-6 col-lg-4">
+            <h4>Customer Services</h4>
+            <div class="Services">
+                <ul>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                    <li>
+                        <a href="">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="">E-waste Policy</a>
+                    </li>
+                    <li>
+                        <a href="">Cancellation & Return Policy</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="footer-back"></section>
+    </div>
+        <p class="end-footer text-center pt-3" style="border-top: 1px solid white;">© 2022 All rights reserved. Reliance Retail Ltd.</p>
+      </footer>
+      
+      <script src="js/app.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</body>
+</html>
