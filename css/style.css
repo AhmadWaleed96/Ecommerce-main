@@ -477,7 +477,7 @@ footer h4{
   @media screen and (max-width: 1400px) {
     .slider__item,
     .slider__container[data-step="4"] .slider__item {
-        width: calc(100% / 2 + 0px);
+        width: calc(100% / 3 + 0px);
       }
 
     .slider__container[data-step="4"] .prod {
@@ -485,7 +485,7 @@ footer h4{
       }
 
     .slider__item {
-        padding: 16px 90px;
+        padding: 16px 3px;
         flex: 0 0 auto;
       }
 
@@ -498,6 +498,13 @@ footer h4{
         margin: 10px;
         max-width: 360px;
         min-width: 330px;
+    }
+
+    .slider__item .mobile-link{
+
+        max-width: 440px;
+        min-width: 365px;
+
     }
   }
 
